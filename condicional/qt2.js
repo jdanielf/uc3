@@ -1,5 +1,20 @@
 import PromptSync from "prompt-sync"
 const prompt = PromptSync()
 
-let cons, não , sim
+let valor
+
+let cons= Number(prompt("Digite o consumo em KWh: "))
+let atra= Number(prompt("O pagamento enta em dia? digite 1 para sim ou 2 para não: "))
+
+if(cons<=100){
+    valor=cons*1.2
+}else{
+    valor=cons*1.7
+}if(atra===2){
+    valor*=1.05
+} 
+console.log("O valor da conta de energia é R$ "+valor.toFixed(2))
+
+
+
 
