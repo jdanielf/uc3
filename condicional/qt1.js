@@ -11,6 +11,6 @@ console.log("Atenção: acima do permitido, multa leve!")
 
 }if(velcarr>velvia10){
     console.log("Atenção: acima do permitido, multa grave!")
-}else{
+}else if(velcarr<=velvia){
     console.log("Velocidade dentro do limite.")
 }
