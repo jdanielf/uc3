@@ -14,10 +14,10 @@ if (tipo ==="basica"){
         console.log("A soma dos números é " +(num1+num2).toFixed(2))
         break
         case "subtracao": 
-        console.log("A soma dos números é " +(num1-num2).toFixed(2))
+        console.log("A subtração dos números é " +(num1-num2).toFixed(2))
         break
         case "multiplicacao": 
-        console.log("A soma dos números é " +(num1*num2).toFixed(2))
+        console.log("A multiplicação dos números é " +(num1*num2).toFixed(2))
         break
         case "divisao":
             if(num2<=0){
@@ -25,7 +25,6 @@ if (tipo ==="basica"){
             } else{
                 console.log("A divisão dos números é " +(num1/num2).toFixed(2))
             }
-        console.log("A soma dos números é " +(num1+num2).toFixed(2))
         break
         default:
             console.log("Operação ou números inválidos'")
