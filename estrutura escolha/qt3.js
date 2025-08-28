@@ -8,7 +8,7 @@ let re3 = prompt("Mora perto da vítima? ").toLowerCase()
 let re4 = prompt("Devia para a vítima? ").toLowerCase()
 let re5 = prompt("Já trabalhou com a vítima? ").toLowerCase()
 
-if ((re1 != "sim" && re1 != "nao") || (re2 != "sim" && re2 != "nao") || (re3 != "sim" && re3 != "nao") ||
+if ((re1   "sim" && re1 != "nao") || (re2 != "sim" && re2 != "nao") || (re3 != "sim" && re3 != "nao") ||
     (re4 != "sim" && re4 != "nao") || (re5 != "sim" && re5 != "nao")) {
     console.log("Digite apenas sim ou não para as perguntas!")
 } else {

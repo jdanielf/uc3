@@ -34,7 +34,7 @@ if (tipo ==="basica"){
      let oper= prompt("Agora,escolha entre as operações que deseja o resultado - Raiz quadrada ou potência: ").toLowerCase()
       switch(oper){
         case "raiz quadrada":
-            let num1=Number(prompt("Digite o número para saber a riaz quadrada: "))
+            let num1=Number(prompt("Digite o número para saber a raiz quadrada: "))
             if(num1<=0){
                 console.log("Digite um número maior que zero!")
             }
