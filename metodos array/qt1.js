@@ -1,18 +1,23 @@
 import PromptSync from "prompt-sync"
 const prompt = PromptSync()
 
-let tex, jorn=[], ofen=["merda", "droga", "bomba", "lula"], i
+let corrigida=[]
+let tex, jorn=[], ofen=["merda", "droga", "bomba", "lula"], i, c=0
 
-tex = prompt(`Digite o texto do artigo para publicação: `)
+
+tex = prompt(`Digite o texto do artigo para publicação: `).toLocaleLowerCase
 jorn=tex.split(" ")
 
 for(i=0 ; i<= jorn.length ; i++){
 
-if(ofen[i]===jorn[i]){
-    let tdofe=[]
-}
-}
+if(ofen.includes(jorn[i])){
+    jorn[i] = '*****'
+    c++
 
-console.log(tex)
+}
+}
+corrigida=jorn.join(" ")
+
 console.log(jorn)
-console.log(tdofe)
+console.log("Palavras ofencivas: ",c)
+console.log(corrigida)
