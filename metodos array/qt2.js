@@ -18,12 +18,14 @@ catmesc = cat.concat(novcat)
 console.log("Novo catálogo: ")
 console.log(catmesc)
 
-let busca= prompt("Qual peça deseja: ")
+let busca = prompt("Qual peça deseja: ").toLowerCase()
 
-for(let i =0 ; i<catmesc.length; i++){
-    if(catmesc[i]===busca)
-        console(`Peça encontrada na posição ${i}`)
+let achei = catmesc.indexOf(busca)
+
+
+    if(achei!=-1){     
+        console.log(`Peça encontrada na posição ${achei+1}`)
+      }
     else{
-        console(`Produto não faz parte da coleção!`)
+        console.log(`Produto não faz parte da coleção!`)       
     }
-}

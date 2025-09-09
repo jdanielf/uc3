@@ -20,7 +20,7 @@ if(quantidade == 0){
     continuar = 0
 }else{
     console.log("Total da compra: R$ " + total.toFixed(2))
-    let din = Number(prompt("Valor pago: "))
+    let din = Number(prompt("Valor pago: R$ "))
     let tro = din - total
 
 console.log("Quantidade de produtos: " + quantidade)
