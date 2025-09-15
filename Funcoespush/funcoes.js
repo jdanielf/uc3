@@ -1,3 +1,8 @@
+import PromptSync from "prompt-sync"
+const prompt = PromptSync()
+
+
+
 export const calcalorias = (atv,tempo)=>{
     let cal=0
     if(atv==="caminhada"){
@@ -20,4 +25,22 @@ export const sacar = (saldo,valor)=>{
     }else{
         return (saldo-valor).toFixed(2)
     }
+}
+
+export function adicione(dsa,da,das){
+let nomes = [] 
+let valores = [] 
+let qtes = []
+console.log(`Digite as solicitações-`)
+
+   let nome=prompt(`Digite o nome do produto : `)
+    let valor=Number(prompt(`Digite o valor do produto : `))
+    let qte=Number(prompt(`Digite a quantidade do produto : `))
+nomes.push(nome)
+valores.push(valor)
+qtes.push(qte)
+
+
+    return{nomes,valores, qtes}
+
 }
