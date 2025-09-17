@@ -8,8 +8,8 @@ let  categoria=["hortifruti","açogue","hortifruti","cereal","hortifruti","horti
 let hort=nomes.filter((nome,p)=>categoria[p]==="hortifruti" )
 console.log (`Os produtos da hortifruti são: ${hort}`)
 
-// let valor=precos.filter((nome,p)=>categoria[p]==="hortifruti" )
-let total=hort.reduce((valor,total)=>hort+total)
+let valor=precos.filter((nome,p)=>categoria[p]==="hortifruti" )
+let total=valor.reduce((valor,total)=>valor+total)
 console.log (`O valor total só das hotifrutis é: R$ ${total}`)
 
 let menor=nomes.filter((nome,p) =>categoria[p]==="hortifruti" && precos[p]<5 )
