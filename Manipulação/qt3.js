@@ -10,8 +10,7 @@ while (true) {
     break
   }
   digi = digi.trim()
-    nomes.push(digi)
-  
+    nomes.push(digi)  
 }
 
 if (nomes.length > 0) {
