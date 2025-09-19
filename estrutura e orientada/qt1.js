@@ -9,7 +9,7 @@ let turno = ['almoco', 'jantar']
 for(let i = 0; i < 2; i++){// dias da semana
     cardapio[i] = []
     for(let j = 0; j < 2; j++ ){//turnos (café, almoço, jantar)
-        cardapio[i][j] = prompt(`Insira a opção da ${semana[i]} para o ${turno[j]}: `)
+        cardapio[i][j] = prompt(`Insira a opção do ${semana[i]} para o ${turno[j]}: `)
       //  cardapio[i].push(prompt(`Digite sua opção ${semana[i]} - ${turno[j]}: `))
     }
 }
@@ -22,20 +22,21 @@ let indturno = turno.indexOf(hor)
 
 // cardapio[semana.indexOf(dia)].splice([turno.indexOf(hor)],1) mais uma forma de excluir
 cardapio[indsemana].splice(indturno,1)
-// let encontrado = cardapio[semana.indexOf(dia)][turno.indexOf(hor)]
-// console.log(encontrado)
-// cardapio.splice(encontrado)
+
 console.table(cardapio)
 
 
-// cardapio[0].splice(0, 1) // remoção com busca
+let alteradia = prompt("Em qual dia você deseja acrescentar:  ")
+let alterahorario = prompt("Em qual turno você deseja acrescentar:  ")
 
-// cardapio[0].splice(cardapio[0].indexOf('pao'), 1) // remoção com busca
+let semanaid = semana.indexOf(alteradia)
+let turnoid = turno.indexOf(alterahorario)
 
-// console.log(cardapio)
+if(semanaid === -1 || turnoid === -1){
+    console.log(`Dia ou turno inválido!`)
+} else {
+    console.log(`Você escolheu alterar: ${semana[semanaid]} - ${turno[turnoid]}`)
+    cardapio[semanaid][turnoid] = prompt("Digite a nova opção do cardápio: ")
+}
 
-// cardapio[1][1] = 'Feijao e Arroz' // alteração de valor
-
-// console.log(cardapio)
-
-// CRUD - CREATE READ UPDATE DELETE
+console.table(cardapio)
