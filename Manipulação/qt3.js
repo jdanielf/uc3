@@ -14,7 +14,7 @@ while (true) {
 }
 
 if (nomes.length > 0) {
-  let sorteio = Math.floor(Math.random() * nomes.length)
+  let sorteio = Math.floor(Math.random() * nomes.length)  b
   console.log("\n--- RESULTADO DO SORTEIO ---")
   console.log("Funcionário vencedor: " + nomes[sorteio])
 } else {
