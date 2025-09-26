@@ -1,5 +1,6 @@
- nimport PromptSync from "prompt-sync"
+import PromptSync from "prompt-sync"
 const prompt = PromptSync()
+
 
 let tipo= prompt("Digite o tipo que deseja realizar - básica ou avançada: ").toLowerCase()
 

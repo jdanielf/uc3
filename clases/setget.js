@@ -46,7 +46,7 @@ export class ContaBancaria {
     
   constructor(nomeTitular, numeroConta, numeroAgencia, dataAbertura) {
           this.#nomeTitular = nomeTitular
-        this.#saldo = 0
+        this.#saldo = 0.0
        this.numeroConta = numeroConta
         this.numeroAgencia = numeroAgencia
         this.dataAbertura = dataAbertura
