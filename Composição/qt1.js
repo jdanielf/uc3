@@ -45,5 +45,70 @@ class Memoria{
 }
 
 let teste = new Memoria()
-teste.usarMcdoria()
+teste.usarMemoria()
     
+
+class Processador{
+
+        #marca
+        #modelo
+        #nucleo     
+        #velocidade 
+        constructor(marca, modelo, nucleo, velocidade){
+            this.#marca= marca
+            this.#modelo= modelo
+            this.#nucleo= nucleo
+            this.#velocidade= velocidade
+        }
+
+        set marca(marc){
+            this.#marca=marc
+        }
+        get marca(){
+            return this.#marca
+        }
+
+        set nucleo(nuc){
+            this.#nucleo=nuc 
+        }
+        get nucleo(){
+            return this.#nucleo
+        }
+
+        set modelo(mod){
+            this.#modelo=mod 
+        }
+        get modelo(){
+            return this.#modelo
+        }
+
+        set velocidade(vel){
+            this#modelo=vel 
+        }
+        get velocidade(){
+            return this.#vrlocidade
+        }
+
+
+}
+
+class Armazenamento{
+    #tipo 
+    #capacidade 
+    #espaco_utilizado 
+
+    constructor(tipo,capacidade, espaco_utilizado){
+        this.#tipo=tipo
+        this.#capacidade=capacidade 
+        this.#espaco_utilizado= 
+
+
+    }
+    espacoLivre(){
+        
+    }
+
+
+
+
+}
