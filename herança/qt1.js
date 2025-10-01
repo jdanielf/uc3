@@ -4,7 +4,8 @@ const prompt = PromptSync()
 
 class Pessoas { 
     #cpf
-    constructor(cpf,dataNascimento){
+    constructor(nome,cpf,dataNascimento){
+        this.nome= nome
         this.#cpf= cpf
         this.dataNascimento= dataNascimento
     }
@@ -23,8 +24,8 @@ class Pessoas {
 class Funcionario extends Pessoas {
     #salario
     #matricula
-    constructor(cpf, dataNascimento,salario,matricula, cargo){
-        super(cpf, dataNascimento)
+    constructor(nome,cpf, dataNascimento,salario,matricula, cargo){
+        super(nome,cpf, dataNascimento)
         this.#salario=salario
         this.#matricula=matricula
         this.cargo=cargo 
@@ -64,12 +65,44 @@ class Funcionario extends Pessoas {
 }
 
 
-class Gerente {
+class Gerente extends Funcionario {
+#salarioGerente
+constructor(nome, cpf, dataNascimento, cargo, salario, matricula, setor, quantidadeEquipe, salariogerente){
+        super(nome, cpf, dataNascimento, cargo, salario, matricula)
+        this.setor = setor
+        this.quantidadeEquipe = quantidadeEquipe
+        this.#salarioGerente=salariogerente
+
+}
+get salarioGerente(){
+    return this.#salarioGerente
+}
+set salarioGerente(salarioGerente){
+    this.#salarioGerente=salarioGerente
+}
+print(){
+    super.print()
+    console.log(`Digite seu setor: ${this.setor}\n Digite a quantidade de pessoas na sua equipe: ${this.quantidadeEquipe}`)
+   
+    if(this.quantidadeEquipe>=10){ 
+        let bonus15 = this.#salarioGerente*15
+        return bonus15
+    }else{
+        let bonus7=this.quantidadeEquipe*7
+        return bonus7
+    }
+
 
 
 }
 
-class Diretor{
+}
+class Diretor extends Funcionario{
+    #participacaoLucros
+    constructor(nome,cpf, dataNascimento,salario,matricula, cargo , partticipacaoLucros ){
+        super(nome, cpf, dataNascimento, cargo, salario, matricula)
+        this.setor = setor
+        this.quantidadeEquipe = quantidadeEquipe
 
 
 }
