@@ -67,11 +67,11 @@ class Funcionario extends Pessoas {
 
 class Gerente extends Funcionario {
 #salarioGerente
-constructor(nome, cpf, dataNascimento, cargo, salario, matricula, setor, quantidadeEquipe, salariogerente){
-        super(nome, cpf, dataNascimento, cargo, salario, matricula)
+constructor(nome, cpf, dataNascimento, salario, matricula, cargo, setor, quantidadeEquipe,salarioGerente){
+        super(nome,cpf, dataNascimento,salario,matricula, cargo)
         this.setor = setor
         this.quantidadeEquipe = quantidadeEquipe
-        this.#salarioGerente=salariogerente
+        this.#salarioGerente=salarioGerente
 
 }
 get salarioGerente(){
@@ -85,10 +85,10 @@ print(){
     console.log(`Digite seu setor: ${this.setor}\n Digite a quantidade de pessoas na sua equipe: ${this.quantidadeEquipe}`)
    
     if(this.quantidadeEquipe>=10){ 
-        let bonus15 = this.#salarioGerente*15
+        let bonus15 = this.#salarioGerente+= this.#salarioGerente*0.15
         return bonus15
     }else{
-        let bonus7=this.quantidadeEquipe*7
+        let bonus7=this.#salarioGerente+= this.quantidadeEquipe*0.07
         return bonus7
     }
 
@@ -99,11 +99,30 @@ print(){
 }
 class Diretor extends Funcionario{
     #participacaoLucros
-    constructor(nome,cpf, dataNascimento,salario,matricula, cargo , partticipacaoLucros ){
-        super(nome, cpf, dataNascimento, cargo, salario, matricula)
-        this.setor = setor
-        this.quantidadeEquipe = quantidadeEquipe
+    constructor(nome,cpf, dataNascimento,salario,matricula, cargo, departamento, tempoDirecao,participacaoLucros ){
+        super(nome, cpf, dataNascimento,salario, matricula, cargo)
+        this.departamento= departamento
+        this.tempoDirecao= tempoDirecao
+        this.#participacaoLucros=participacaoLucros
+    }
+        get participacaoLucros(){
+            return this.#participacaoLucros
+        }
+        set participacaoLucros(participacaoLucros){
+            this.#participacaoLucros=participacaoLucros
+        }   
 
+        print (){ 
+            super this.print()
+            let partici = prompt(`Você tem participação nos lucros? (s/n): `)
+            let tempoDirecao = Number(prompt(`Digite seu tempo de direção em anos: `))
+            if(partici==='s' && tempoDirecao>5){
+              
+                console.log(`Digite seu departamento: ${this.departamento}\n Digite seu tempo de direção: ${this.tempoDirecao}`)
+                let bonus = this.#participacaoLucros+= this.#participacaoLucros*0.25
+                return bonus
+
+        }
 
 }
 
