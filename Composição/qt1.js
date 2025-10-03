@@ -83,10 +83,10 @@ class Processador{
         }
 
         set velocidade(vel){
-            this#modelo=vel 
+            this.#modelo=vel 
         }
         get velocidade(){
-            return this.#vrlocidade
+            return this.#velocidade
         }
 
 
@@ -101,8 +101,6 @@ class Armazenamento{
         this.#tipo=tipo
         this.#capacidade=capacidade 
         this.#espaco_utilizado= 
-
-
     }
     espacoLivre(){
         
@@ -112,3 +110,7 @@ class Armazenamento{
 
 
 }
+
+
+
+
