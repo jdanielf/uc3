@@ -17,7 +17,7 @@ do{
 
 switch(teste){
     case '1':
-        prompt(`Cadastro de Funcionário \n`)
+       console.log(`Cadastro de Funcionário \n`)
         // let func1 = new Funcionario()
         let nome = prompt(`Digite seu nome: `)
         let cpf = prompt(`Digite seu CPF: `)
@@ -26,10 +26,10 @@ switch(teste){
         let matricula = prompt(`Digite sua matrícula: `)
         let cargo = prompt(`Digite seu cargo: `)
         let func = new Funcionario(nome,cpf, dataNascimento,salario,matricula, cargo)
-        console.log(`O valor total do salário com hora extra é de: R$${func.salario+func.print()}`)
+        console.log(`O valor total do salário com hora extra é de: R$${salario+func.print()}`)
         break
     case '2':
-        prompt(`Cadastro de Gerente \n`)
+       console.log(`Cadastro de Gerente \n`)
         let nomeG = prompt(`Digite seu nome: `)
         let cpfG = prompt(`Digite seu CPF: `)
         let dataNascimentoG = prompt(`Digite sua data de nascimento(__/__/__): `)
@@ -43,7 +43,7 @@ switch(teste){
         console.log(`O valor total do salário do gerente com bônus é de: R$${ger.print()}`)
         break
     case '3':
-        prompt(`Cadastro de Diretor \n`)
+        console.log(`Cadastro de Diretor \n`)
         let nomeD = prompt(`Digite seu nome: `)
         let cpfD = prompt(`Digite seu CPF: `)
         let dataNascimentoD = prompt(`Digite sua data de nascimento(__/__/__): `)
@@ -55,7 +55,7 @@ switch(teste){
         let participacaoLucros = Number(prompt(`Digite o valor da sua participação nos lucros para calcular o bônus: `))
         let dir = new Diretor
     case `4`:
-        prompt(`Cadastro de Dono \n`)
+        console.log(`Cadastro de Dono \n`)
         let nomeDo = prompt(`Digite seu nome: `)
         let cpfDo = prompt(`Digite seu CPF: `)
         let dataNascimentoDo = prompt(`Digite sua data de nascimento(__/__/__): `)

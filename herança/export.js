@@ -57,6 +57,7 @@ export class Funcionario extends Pessoas {
         }
         else{
             console.log(`Não foi feito hora extra `) 
+            return 0
 
         }
        
