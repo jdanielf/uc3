@@ -82,15 +82,15 @@ set salarioGerente(salarioGerente){
     this.#salarioGerente=salarioGerente
 }
 print(){
-    super.print()
-    console.log(`Digite seu setor: ${this.setor}\n Digite a quantidade de pessoas na sua equipe: ${this.quantidadeEquipe}`)
-   
-    if(this.quantidadeEquipe>=10){ 
-        let bonus15 = this.#salarioGerente+= this.#salarioGerente*0.15
-        return bonus15
+    // super.print()
+  let quant = Number(prompt(` Digite a quantidade de pessoas na sua equipe: `))
+   let bonus=0
+    if(quant>=10){ 
+         bonus=this.salario*0.15
+        return bonus
     }else{
-        let bonus7=this.#salarioGerente+= this.quantidadeEquipe*0.07
-        return bonus7
+       bonus= this.salario*0.07
+        return bonus
     }
 
 

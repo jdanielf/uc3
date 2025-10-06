@@ -4,9 +4,10 @@ const prompt = PromptSync()
 
 
 let teste
+ 
 do{
  teste = prompt( `
-   Quais das opções deseja cadastrar - 
+    Quais das opções deseja cadastrar -
     1- Funcionário 
     2- Gerente
     3- Diretor
@@ -18,29 +19,28 @@ do{
 switch(teste){
     case '1':
        console.log(`Cadastro de Funcionário \n`)
-        // let func1 = new Funcionario()
-        let nome = prompt(`Digite seu nome: `)
-        let cpf = prompt(`Digite seu CPF: `)
-        let dataNascimento = prompt(`Digite sua data de nascimento(__/__/__): `)
-        let salario = Number(prompt(`Digite seu salário: `))
-        let matricula = prompt(`Digite sua matrícula: `)
-        let cargo = prompt(`Digite seu cargo: `)
-        let func = new Funcionario(nome,cpf, dataNascimento,salario,matricula, cargo)
-        console.log(`O valor total do salário com hora extra é de: R$${salario+func.print()}`)
+        let func1 = new Funcionario()
+        func1.nome = prompt(`Digite seu nome: `)
+        func1.cpf = Number(prompt(`Digite seu CPF: `))
+        func1.dataNascimento =Number(prompt(`Digite sua data de nascimento(__/__/__): `))
+        func1.salario = Number(prompt(`Digite seu salário: `))
+        func1.matricula = Number(prompt(`Digite sua matrícula: `))
+        func1.cargo = prompt(`Digite seu cargo: `)
+        console.log(`O valor total do salário com hora extra é de: R$${func1.salario+func1.print()}`)
+    
         break
     case '2':
        console.log(`Cadastro de Gerente \n`)
-        let nomeG = prompt(`Digite seu nome: `)
-        let cpfG = prompt(`Digite seu CPF: `)
-        let dataNascimentoG = prompt(`Digite sua data de nascimento(__/__/__): `)
-        let salarioG = Number(prompt(`Digite seu salário: `))
-        let matriculaG = prompt(`Digite sua matrícula: `)
-        let cargoG = prompt(`Digite seu cargo: `)
-        let setor = prompt(`Digite seu setor: `)
-        let quantidadeEquipe = Number(prompt(`Digite a quantidade de pessoas na sua equipe: `))
-        let salarioGerente = Number(prompt(`Digite o valor do seu salário para calcular o bônus: `))
-        let ger = new Gerente(nomeG, cpfG, dataNascimentoG, salarioG, matriculaG, cargoG, setor, quantidadeEquipe,salarioGerente)
-        console.log(`O valor total do salário do gerente com bônus é de: R$${ger.print()}`)
+       let ger1 = new Gerente()
+         ger1.nome = prompt(`Digite seu nome: `)
+         ger1.cpf = Number(prompt(`Digite seu CPF: `))
+            ger1.dataNascimento =Number(prompt(`Digite sua data de nascimento(__/__/__): `))        
+            ger1.salario = Number(prompt(`Digite seu salário: `))
+            ger1.matricula = Number(prompt(`Digite sua matrícula: `))
+            ger1.setor = prompt(`Digite seu setor: `)      
+            console.log(`O valor total do salário do gerente com bônus é de: R$${ger1.salario+ger1.print()}`)
+            
+    
         break
     case '3':
         console.log(`Cadastro de Diretor \n`)
