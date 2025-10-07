@@ -114,25 +114,26 @@ export class Diretor extends Funcionario{
         }   
 
         print (){ 
-            super .print()
+            // super .print()
             let partici = prompt(`Você tem participação nos lucros? (s/n): `).toLowerCase()
             // let tempoDirecao = Number(prompt(`Digite seu tempo de direção em anos: `))
-            if(partici==='s' && tempoDirecao>5){              
+            let  bonus
+            if(partici==='s' && this.tempoDirecao>5){              
                 // console.log(`Digite seu departamento: ${this.departamento}\n Digite seu tempo de direção: ${this.tempoDirecao}`)
-                let bonus30 = this.#participacaoLucros+= this.#participacaoLucros*0.30
-                return bonus30
-        } else if(partici==='s' && tempoDirecao<5 && tempoDirecao>2){              
+                bonus = this.salario+= this.salario*0.30
+                return bonus
+        } else if(partici==='s' && this.tempoDirecao<=5 && this.tempoDirecao>=2){              
             // console.log(`Digite seu departamento: ${this.departamento}\n Digite seu tempo de direção: ${this.tempoDirecao}`)
-            let bonus25 = this.#participacaoLucros+= this.#participacaoLucros*0.25
-            return bonus25
-        } else if(partici==='s' && tempoDirecao<2){              
+            bonus= this.salario+= this.salario*0.25
+            return bonus
+        } else if(partici==='s' && this.tempoDirecao<2){              
             // console.log(`Digite seu departamento: ${this.departamento}\n Digite seu tempo de direção: ${this.tempoDirecao}`)
-            let bonus20 = this.#participacaoLucros+= this.#participacaoLucros*0.20
-            return bonus20
+            bonus = this.salario+= this.salario*0.20
+            return bonus
         } else if(partici==='n'){              
             // console.log(`Digite seu departamento: ${this.departamento}\n Digite seu tempo de direção: ${this.tempoDirecao}`)
-            let bonus15 = this.#participacaoLucros+= this.#participacaoLucros*0.15
-            return bonus15
+            let bonus = this.salario+= this.salario*0.15
+            return bonus
         }else{
             console.log(`Opção inválida`)
         }

@@ -44,28 +44,29 @@ switch(teste){
         break
     case '3':
         console.log(`Cadastro de Diretor \n`)
-        let nomeD = prompt(`Digite seu nome: `)
-        let cpfD = prompt(`Digite seu CPF: `)
-        let dataNascimentoD = prompt(`Digite sua data de nascimento(__/__/__): `)
-        let salarioD = Number(prompt(`Digite seu salário: `))
-        let matriculaD = prompt(`Digite sua matrícula: `)
-        let cargoD = prompt(`Digite seu cargo: `)
-        let departamento = prompt(`Digite seu departamento: `)
-        let tempoDirecao = Number(prompt(`Digite seu tempo de direção em anos: `))
-        let participacaoLucros = Number(prompt(`Digite o valor da sua participação nos lucros para calcular o bônus: `))
-        let dir = new Diretor
+        let dir = new Diretor()
+        dir.nome = prompt(`Digite seu nome: `)
+        dir.cpf = prompt(`Digite seu CPF: `)
+        dir.dataNascimento = prompt(`Digite sua data de nascimento(__/__/__): `)
+        dir.salario = Number(prompt(`Digite seu salário: `))
+        dir.matricula = prompt(`Digite sua matrícula: `)
+        dir.tempoDirecao = Number(prompt(`Digite seu tempo de direção em anos: `))
+       console.log(`O valor total do salário do diretor com bônus é de: R$${ dir.print()}`)
+
+                
+       break
     case `4`:
         console.log(`Cadastro de Dono \n`)
-        let nomeDo = prompt(`Digite seu nome: `)
-        let cpfDo = prompt(`Digite seu CPF: `)
-        let dataNascimentoDo = prompt(`Digite sua data de nascimento(__/__/__): `)
-        let salarioDo = Number(prompt(`Digite seu salário: `))
-        let matriculaDo = prompt(`Digite sua matrícula: `)
-        let cargoDo = prompt(`Digite seu cargo: `)
-        let qtdFuncionarios = Number(prompt(`Digite a quantidade de funcionários na empresa: `))
-        let qtdDiretores = Number(prompt(`Digite a quantidade de diretores na empresa: `))
-        let patrimonioEmpresa = Number(prompt(`Digite o valor do patrimônio da empresa para calcular o bônus: `))
-        let dono = new Dono(nomeDo, cpfDo, dataNascimentoDo, salarioDo, matriculaDo, cargoDo, qtdFuncionarios, qtdDiretores, patrimonioEmpresa)
+        // let nomeDo = prompt(`Digite seu nome: `)
+        // let cpfDo = prompt(`Digite seu CPF: `)
+        // let dataNascimentoDo = prompt(`Digite sua data de nascimento(__/__/__): `)
+        // let salarioDo = Number(prompt(`Digite seu salário: `))
+        // let matriculaDo = prompt(`Digite sua matrícula: `)
+        // let cargoDo = prompt(`Digite seu cargo: `)
+        // let qtdFuncionarios = Number(prompt(`Digite a quantidade de funcionários na empresa: `))
+        // let qtdDiretores = Number(prompt(`Digite a quantidade de diretores na empresa: `))
+        // let patrimonioEmpresa = Number(prompt(`Digite o valor do patrimônio da empresa para calcular o bônus: `))
+        // let dono = new Dono(nomeDo, cpfDo, dataNascimentoDo, salarioDo, matriculaDo, cargoDo, qtdFuncionarios, qtdDiretores, patrimonioEmpresa)
         console.log(`O valor total do salário do dono com bônus é de: R$${dono.print()}`)
         break
 
