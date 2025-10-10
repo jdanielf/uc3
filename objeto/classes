@@ -1,0 +1,40 @@
+import PromptSync from "prompt-sync"
+const prompt = PromptSync()
+
+
+export class Cliente{
+#cliente
+#contato
+constructor(nome,cliente, contato){
+    nome =nome 
+    this.#cliente = cliente
+    this.#contato = contato
+
+}
+}
+
+export class Quarto{
+constructor(numero, tipoQuarto){
+    this.numero = numero
+    this.tipoQuarto = tipoQuarto
+
+}
+}
+
+export class Reserva{
+    constructor(quarto , dataReserva , cliente){
+        this.quarto = quarto
+        this.dataReserva = dataReserva
+        this.cliente = cliente
+    }
+}
+
+export class Hotel{
+    constructor(nome,  quartos = [], reservas = []){
+        this.nome = nome
+        this.quartos = quartos
+        this.reservas = reservas
+    }
+
+                          
+}
