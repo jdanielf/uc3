@@ -106,13 +106,13 @@ export class Hotel {
 export class QuartoOcupado extends Error {
     constructor(message) {
         super(message)
-        this.name = "QuartoOcupado"
+        this.name = "Quarto Ocupado"
     }
 }
 
 export class DataInvalida extends Error {
     constructor(message) {
         super(message)
-        this.name = "DataInvalida"
+        this.name = "Data Invalida"
     }
 }

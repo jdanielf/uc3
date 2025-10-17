@@ -1,5 +1,6 @@
 import PromptSync from "prompt-sync"
 import {Cliente, Quarto, Reserva, Hotel, QuartoOcupado, DataInvalida  } from "./classes.js"
+import fs from 'fs'
 const prompt = PromptSync()
 
 
