@@ -1,11 +1,11 @@
 import PromptSync from "prompt-sync"
-import {Cliente, Quarto, Reserva, Hotel, QuartoOcupado, DataInvalida  } from "./classes.js"
+import {Cliente, Quarto, Reserva, Hotel, QuartoOcupado, DataInvalida, criarDiretorio  } from "./classes.js"
 import fs from 'fs'
 const prompt = PromptSync()
 
 
 
-   const hotel = new Hotel("Paraíso dos Sonhos")
+   let hotel = new Hotel("Paraíso dos Sonhos")
 
 let opcao
 do {
@@ -22,35 +22,35 @@ do {
     try {
         switch (opcao) {
             case "1":
-                const num = prompt("Número do quarto: ")
-                const tipo = prompt("Tipo do quarto: ")
+                let num = prompt("Número do quarto: ")
+                let tipo = prompt("Tipo do quarto: ")
                 hotel.adicionarQuarto(num, tipo)
                 console.log("Quarto adicionado!")
                 break
 
             case "2":
-                const numero = prompt("Número do quarto: ")
-                const data = prompt("Data da reserva (AAAA-MM-DD): ")
-                const nome = prompt("Nome do cliente: ")
-                const cpf = prompt("CPF: ")
-                const contato = prompt("Contato: ")
+                let numero = prompt("Número do quarto: ")
+                let data = prompt("Data da reserva (AAAA-MM-DD): ")
+                let nome = prompt("Nome do cliente: ")
+                let cpf = prompt("CPF: ")
+                let contato = prompt("Contato: ")
 
-                const cliente = new Cliente(nome, cpf, contato)
+                let cliente = new Cliente(nome, cpf, contato)
                 hotel.reservarQuarto(numero, data, cliente)
                 console.log("Reserva feita com sucesso!")
                 break
 
             case "3":
-                const numCanc = prompt("Número do quarto: ")
-                const dataCanc = prompt("Data da reserva (AAAA-MM-DD): ")
-                const cpfCanc = prompt("CPF do cliente: ")
+                let numCanc = prompt("Número do quarto: ")
+                let dataCanc = prompt("Data da reserva (AAAA-MM-DD): ")
+                let cpfCanc = prompt("CPF do cliente: ")
                 hotel.cancelarReserva(numCanc, dataCanc, cpfCanc)
                 console.log("Reserva cancelada!")
                 break
 
             case "4":
-                const dataDisp = prompt("Data para verificar (AAAA-MM-DD): ")
-                const disponiveis = hotel.listarQuartosDisponiveis(dataDisp)
+                let dataDisp = prompt("Data para verificar (AAAA-MM-DD): ")
+                let disponiveis = hotel.listarQuartosDisponiveis(dataDisp)
                 if (disponiveis.length === 0) {
                     console.log("Nenhum quarto disponível.")
                 } else {
@@ -60,7 +60,7 @@ do {
                 break
 
             case "5":
-                const reservas = hotel.listarReservas()
+                let reservas = hotel.listarReservas()
                 if (reservas.length === 0) {
                     console.log(" Nenhuma reserva encontrada.")
                 } else {
@@ -71,9 +71,9 @@ do {
                 break
 
             case "6":
-                const numInfo = prompt("Número do quarto: ")
-                const dataInfo = prompt("Data da reserva (AAAA-MM-DD): ")
-                const info = hotel.informacoesReserva(numInfo, dataInfo)
+                let numInfo = prompt("Número do quarto: ")
+                let dataInfo = prompt("Data da reserva (AAAA-MM-DD): ")
+                let info = hotel.informacoesReserva(numInfo, dataInfo)
                 if (info) {
                     console.log(`ℹ Cliente: ${info.cliente.nome}`)
                     console.log(`CPF: ${info.cliente.cpf}`)
@@ -95,3 +95,7 @@ do {
         console.log(` Erro: ${erro.message}`)
     }
 } while (opcao !== "0")
+
+    criarDiretorio(prompt("Nome do diretório a ser criado: "))
+    // mkdirSync(prompt("Nome do diretório a ser criado: "))
+

@@ -1,3 +1,4 @@
+import { mkdirSync } from "fs"
 import PromptSync from "prompt-sync"
 const prompt = PromptSync()
 
@@ -115,4 +116,12 @@ export class DataInvalida extends Error {
         super(message)
         this.name = "Data Invalida"
     }
+}
+
+export function criarDiretorio(){
+    try{
+        mkdirSync()
+ }catch(error){
+    console.log(error.message)
+ }
 }
